@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 public class UserLoginHandler {
 	private static Staff LOGIN_STAFF ;
