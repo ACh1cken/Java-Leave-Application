@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 import java.util.ArrayList;
 import java.util.HashMap;
