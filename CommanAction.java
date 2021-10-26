@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 import javax.swing.JMenuItem;
 
