@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 import java.awt.Color;
 import java.awt.Dimension;
