@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 import java.awt.Dimension;
 import java.awt.Font;
