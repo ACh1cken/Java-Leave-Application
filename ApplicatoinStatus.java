@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 public enum ApplicationStatus {
 	SUCCESS,
