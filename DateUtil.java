@@ -1,4 +1,3 @@
-# Java-Leave-Application
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
