@@ -80,21 +80,21 @@ public class ApprovalProcessFrame extends BaseWorkFrame  {
 		this.opPanel.add(this.remarkLabel);
 		this.opPanel.add(this.remarkText);
 		
-		final JButton Log InButton = new JButton("Log In");
-		Log InButton.addActionListener(new ActionListener() {
+		final JButton LogInButton = new JButton("Log In");
+		LogInButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						int selectedRow = table.getSelectedRow();
 						if (selectedRow != -1) 
 						{
-							Log In(selectedRow);
+							LogIn(selectedRow);
 						}else{					JOptionPane.showMessageDialog(null,"Please select at least one Leave Application!");
 						}
 					}
 				});
-		this.opPanel.add(Log InButton);
+		this.opPanel.add(LogInButton);
 	}
 
-	private void Log In(int selectedRow){
+	private void LogIn(int selectedRow){
 		Staff staff = UserLoginHandler.getLoginStaff();
 		List<ApprovalProcess> list = DataCenter.getApprovalProcessBySupervisorId(staff.getId());
 		for(ApprovalProcess p:list){

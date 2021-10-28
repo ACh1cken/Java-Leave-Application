@@ -22,7 +22,7 @@ public class CommanAction {
 			new ApprovalProcessFrame();
 			changed = true;
 		}else if (clickMenu == frame.newStaffMenuItem) {
-			new AddStaffFrame();
+			new UserLoginHandler();
 			changed = true;
 		}else if (clickMenu == frame.newApplicationMenuItem) {
 			new AddApplicationFrame();

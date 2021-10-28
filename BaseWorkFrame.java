@@ -31,7 +31,7 @@ public abstract class BaseWorkFrame extends JFrame implements ActionListener{
 			return;
 		}
 		
-		this.textFont = new Font("Arial Black",Font.SERIF PLAIN,20);
+		this.textFont = new Font("SERIF",Font.PLAIN,20);
 		
 		panel=(JPanel)this.getContentPane();	
 		panel.setLayout(null);

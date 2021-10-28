@@ -1,5 +1,4 @@
 
-
 import java.util.Random;
 public class IdGenerator {
 	public static String getGenerateId(String prefix){

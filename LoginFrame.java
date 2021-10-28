@@ -19,7 +19,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 	private JLabel passwordLabel ;	
 	private JTextField usernameText;
 	private JPasswordField passwordText;
-	private JButton Log InButton;
+	private JButton LogInButton;
 	private JButton resetButton;
 	private JLabel msgLabel;
 	private JCheckBox showPassword;
@@ -31,13 +31,13 @@ public class LoginFrame extends JFrame implements ActionListener {
 	
 	private void init(){
 		JPanel panel=(JPanel)this.getContentPane();
-		Font titleFont = new Font("Arial",Font.BOLD,28);
-		Font checkbox = new Font("Arial",Font.SERIF PLAIN,15);
-		Font textFont = new Font("Arial",Font.SERIF PLAIN,22);
+		Font titleFont = new Font("Arial",Font.BOLD,24);
+		Font checkbox = new Font("Serif",Font.PLAIN ,15);
+		Font textFont = new Font("Serif",Font.PLAIN,22);
 		
 		this.titleLabel = new JLabel("Leave Application System");
 		this.titleLabel.setFont(titleFont);
-		this.titleLabel.setForeground(Color.GREY);
+		this.titleLabel.setForeground(Color.GRAY);
 		this.titleLabel.setSize(300, 150);
 		this.titleLabel.setLocation(300, 30);
 		
@@ -61,11 +61,11 @@ public class LoginFrame extends JFrame implements ActionListener {
 		this.passwordText.setSize(300, 50);
 		this.passwordText.setLocation(300, 220);
 		
-		this.Log InButton = new JButton("Login");
-		this.Log InButton.setFont(textFont);
-		this.Log InButton.setSize(100, 50);
-		this.Log InButton.setLocation(200, 330);
-		this.Log InButton.addActionListener(this);
+		this.LogInButton = new JButton("Login");
+		this.LogInButton.setFont(textFont);
+		this.LogInButton.setSize(100, 50);
+		this.LogInButton.setLocation(200, 330);
+		this.LogInButton.addActionListener(this);
 		
 		this.resetButton = new JButton("Reset");
 		this.resetButton.setFont(textFont);
@@ -90,7 +90,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 		panel.add(this.passwordLabel);
 		panel.add(this.usernameText);
 		panel.add(this.passwordText);
-		panel.add(this.Log InButton);
+		panel.add(this.LogInButton);
 		panel.add(this.resetButton);
 		panel.add(this.msgLabel);
 		panel.add(this.showPassword);
@@ -110,7 +110,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		if(arg0.getSource() == this.Log InButton){
+		if(arg0.getSource() == this.LogInButton){
 			login();
 		}else if(arg0.getSource() == this.resetButton){
 			reset();

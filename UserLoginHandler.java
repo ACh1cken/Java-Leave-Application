@@ -1,8 +1,6 @@
-# Java-Leave-Application
 
 public class UserLoginHandler {
 	private static Staff LOGIN_STAFF ;
-
 	public static boolean login(String username,String password){
 		Staff staff = DataCenter.getStaffByUsername(username);
 		if(null == staff){
@@ -15,14 +13,12 @@ public class UserLoginHandler {
 			return false;
 		}
 		LOGIN_STAFF = staff;
-		return true;		
-	}
+		return true;}
 	public static Staff getLoginStaff(){
 		return LOGIN_STAFF;
 	}
+	
+	
 	public static boolean logout(){
 		LOGIN_STAFF = null;
-		return true;
-	}
-}
-
+		return true;}}

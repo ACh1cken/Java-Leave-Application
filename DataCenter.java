@@ -179,7 +179,7 @@ public final class DataCenter {
 			
 			addApprovalProcess(nextProcess);
 		}		
-		return true}
+		return true;}
 	
 	public static boolean addApprovalProcess(ApprovalProcess process){
 		if(StringUtil.isBlank(process.getId())||StringUtil.isBlank(process.getApplicationId()) || StringUtil.isBlank(process.getSupervisorId())){
