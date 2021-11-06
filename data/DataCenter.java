@@ -112,25 +112,6 @@ public final class DataCenter
         return true;
     }
     
-    public static void saveData(){
-        try {
-            File file1 = new File("Tmp");
-            FileOutputStream fos = new FileOutputStream(file1);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-
-            oos.writeChars("ID Staff Map: ");
-            oos.writeObject(usernameStaffMap);
-            oos.flush();
-            oos.close();
-            fos.close();
-
-        } catch (Exception e) {
-            System.out.println("Failed to save!");
-        }
-
-
-    }
-
 
 
 

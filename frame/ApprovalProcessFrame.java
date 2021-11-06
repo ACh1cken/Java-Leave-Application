@@ -18,6 +18,7 @@ import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import javax.swing.table.TableModel;
@@ -93,6 +94,8 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent s) {
+
+                
                 try {
                     FileWriter writer = new FileWriter("Approval.txt");
                     for (int r = 0; r < tmd.getRowCount(); r++) {
@@ -104,13 +107,34 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
                     }
                     writer.flush();
                     writer.close();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
+                    JOptionPane.showMessageDialog(null, "Successfully saved into Approval.txt!");
+                    
+                } catch (IOException injarfile) {
 
+                    try {
+                        String path = ApprovalProcessFrame.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + " Approval.txt";
+                        FileWriter write1 = new FileWriter(path);
+                        for (int r = 0; r < tmd.getRowCount(); r++) {
+                            for (int c = 0; c < tmd.getColumnCount(); c++) {
+                                write1.write(tmd.getValueAt(r, c).toString());
+                                write1.write(' ');
+                            }
+                            write1.write("\n");
+                        }
+                        write1.flush();
+                        write1.close();
+                        JOptionPane.showMessageDialog(null, path);
+    
+    
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
+                    }
+                    injarfile.printStackTrace();
+                }
             }
         });
+
+        
 
         this.opPanel.add(this.remarkLabel);
         this.opPanel.add(this.remarkText);

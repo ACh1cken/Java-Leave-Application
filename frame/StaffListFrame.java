@@ -75,7 +75,7 @@ public class StaffListFrame extends BaseWorkFrame
                     StaffListFrame.this.delStaff(selectedRow);
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "Please select a staff first!!!");
+                    JOptionPane.showMessageDialog(null, "Please select a staff first!");
                 }
             }
         });
@@ -90,18 +90,18 @@ public class StaffListFrame extends BaseWorkFrame
                 return;
             }
             if (Role.DIRECTOR == staff.getRole()) {
-                JOptionPane.showMessageDialog(null, "Can not delete DIRECTOR!!!");
+                JOptionPane.showMessageDialog(null, "Can not delete DIRECTOR!");
                 return;
             }
             if (DataCenter.deleteStaff(staffId)) {
                 this.tmd.removeRow(selectedRow);
             }
             else {
-                JOptionPane.showMessageDialog(null, "Failed to delete user!!!");
+                JOptionPane.showMessageDialog(null, "Failed to delete user!");
             }
         }
         else {
-            JOptionPane.showMessageDialog(null, "Please select a staff first!!!");
+            JOptionPane.showMessageDialog(null, "Please select a staff first!");
         }
     }
     

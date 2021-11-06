@@ -22,7 +22,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;   
 import javax.swing.JFrame;
 
-public class LoginFrame extends JFrame implements ActionListener, WindowListener
+public class LoginFrame extends JFrame implements ActionListener
 {
     private static final long serialVersionUID = -2248657415132249L;
     private JLabel titleLabel;
@@ -40,13 +40,13 @@ public class LoginFrame extends JFrame implements ActionListener, WindowListener
     
     private void init() {
         final JPanel panel = (JPanel)this.getContentPane();
-        final Font titleFont = new Font("Arial", 1, 24);
+        final Font titleFont = new Font("SansSerif", 1, 24);
         final Font textFont = new Font("Arial", 0, 18);
         (this.titleLabel = new JLabel("Welcome to Leave Application System")).setFont(titleFont);
         this.titleLabel.setForeground(Color.BLACK);
         this.titleLabel.setSize(600, 50);
         this.titleLabel.setLocation(115, 30);
-        (this.usernameLabel = new JLabel("UserName:")).setFont(textFont);
+        (this.usernameLabel = new JLabel("Username:")).setFont(textFont);
         this.usernameLabel.setSize(100, 50);
         this.usernameLabel.setLocation(150, 150);
         (this.passwordLabel = new JLabel("Password:")).setFont(textFont);
@@ -78,7 +78,6 @@ public class LoginFrame extends JFrame implements ActionListener, WindowListener
         panel.add(this.submitButton);
         panel.add(this.clearButton);
         panel.add(this.msgLabel);
-        addWindowListener(this);   
         this.setSize(800, 600);
         final Toolkit kit = Toolkit.getDefaultToolkit();
         final Dimension screenSize = kit.getScreenSize();
@@ -124,48 +123,4 @@ public class LoginFrame extends JFrame implements ActionListener, WindowListener
         new LoginFrame();
     }
 
-    @Override
-    public void windowOpened(WindowEvent arg0) {
-        System.out.println("activated");    
-        
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
-        System.out.println("closing");  
-        DataCenter.saveData();
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void windowClosed(WindowEvent arg0) {
-        System.out.println("closed");    
-;
-        
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
 }

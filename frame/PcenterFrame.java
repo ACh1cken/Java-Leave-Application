@@ -27,7 +27,7 @@ public class PcenterFrame extends BaseWorkFrame
         (this.idLabel = new JLabel("ID :")).setFont(this.textFont);
         this.idLabel.setSize(150, 30);
         this.idLabel.setLocation(100, 20);
-        (this.unameLabel = new JLabel("UserName:")).setFont(this.textFont);
+        (this.unameLabel = new JLabel("Username:")).setFont(this.textFont);
         this.unameLabel.setSize(150, 30);
         this.unameLabel.setLocation(100, 60);
         (this.pwdLabel = new JLabel("Password:")).setFont(this.textFont);

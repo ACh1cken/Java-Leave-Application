@@ -17,7 +17,7 @@ public class IdGenerator
     
     public static int getNdigitalRandom(final int n) throws Exception {
         if (n < 0 || n > 9) {
-            throw new Exception("getNdigitalRandom method the parameter n must between 1 and 9.");
+            throw new Exception("getNdigitalRandom method the parameter of n must between 1 and 9.");
         }
         final int maxNum = (int)Math.pow(10.0, n);
         int num = new Random().nextInt(maxNum);
