@@ -95,7 +95,7 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
             @Override
             public void actionPerformed(final ActionEvent s) {
 
-                
+                if (tmd.getValueAt(0, 0) != null){
                 try {
                     FileWriter writer = new FileWriter("Approval.txt");
                     for (int r = 0; r < tmd.getRowCount(); r++) {
@@ -131,6 +131,11 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
                     }
                     injarfile.printStackTrace();
                 }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Table is empty! Unable to save!");
+                }
+
+
             }
         });
 

@@ -10,6 +10,8 @@ import java.awt.LayoutManager;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -33,7 +35,7 @@ public class LoginFrame extends JFrame implements ActionListener
     private JButton submitButton;
     private JButton clearButton;
     private JLabel msgLabel;
-    
+    private JLabel iconlabel;
     public LoginFrame() {
         this.init();
     }
@@ -41,9 +43,13 @@ public class LoginFrame extends JFrame implements ActionListener
     private void init() {
         final JPanel panel = (JPanel)this.getContentPane();
         final Font titleFont = new Font("SansSerif", 1, 24);
-        final Font textFont = new Font("Arial", 0, 18);
-        (this.titleLabel = new JLabel("Welcome to Leave Application System")).setFont(titleFont);
-        this.titleLabel.setForeground(Color.BLACK);
+        final Font textFont = new Font("Serif", 0, 20);
+        final Font buttonsFont = new Font ("Arial",0,18);
+        this.iconlabel = new JLabel(new ImageIcon(getClass().getResource("/assets/Bundle_of_Balloons.png")));
+        this.iconlabel.setBounds(178, 18, 139, 65);
+        (this.titleLabel = new JLabel("Leave Application System")).setFont(titleFont);
+        this.titleLabel.setHorizontalAlignment(JLabel.CENTER);
+        this.titleLabel.setForeground(Color.DARK_GRAY);
         this.titleLabel.setSize(600, 50);
         this.titleLabel.setLocation(115, 30);
         (this.usernameLabel = new JLabel("Username:")).setFont(textFont);
@@ -58,11 +64,11 @@ public class LoginFrame extends JFrame implements ActionListener
         (this.passwordText = new JPasswordField()).setFont(textFont);
         this.passwordText.setSize(300, 50);
         this.passwordText.setLocation(300, 220);
-        (this.submitButton = new JButton("Submit")).setFont(textFont);
+        (this.submitButton = new JButton("Login")).setFont(buttonsFont);
         this.submitButton.setSize(100, 50);
         this.submitButton.setLocation(200, 300);
         this.submitButton.addActionListener(this);
-        (this.clearButton = new JButton("Clear")).setFont(textFont);
+        (this.clearButton = new JButton("Clear")).setFont(buttonsFont);
         this.clearButton.setSize(100, 50);
         this.clearButton.setLocation(400, 300);
         this.clearButton.addActionListener(this);
@@ -70,6 +76,8 @@ public class LoginFrame extends JFrame implements ActionListener
         this.msgLabel.setSize(400, 50);
         this.msgLabel.setLocation(150, 400);
         panel.setLayout(null);
+
+        panel.add(this.iconlabel);
         panel.add(this.titleLabel);
         panel.add(this.usernameLabel);
         panel.add(this.passwordLabel);
