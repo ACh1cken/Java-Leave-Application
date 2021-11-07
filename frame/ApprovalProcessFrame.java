@@ -15,7 +15,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.AbstractButton;
 import java.awt.event.MouseListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -123,7 +125,7 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
                         }
                         write1.flush();
                         write1.close();
-                        JOptionPane.showMessageDialog(null, path);
+                        JOptionPane.showMessageDialog(null,"Successfully saved into Approval.txt!" );
     
     
                     } catch (Exception e2) {
@@ -138,8 +140,6 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
 
             }
         });
-
-        
 
         this.opPanel.add(this.remarkLabel);
         this.opPanel.add(this.remarkText);
