@@ -91,6 +91,7 @@ public class ApprovalProcessFrame extends BaseWorkFrame {
         this.opPanel.add(this.selectIdLabel);
         this.opPanel.add(this.selectIdText);
         this.opPanel.add(this.endorse);
+        this.opPanel.add(this.decline);
         final JButton saveButton = new JButton("Save");
 
         saveButton.addActionListener(new ActionListener() {
